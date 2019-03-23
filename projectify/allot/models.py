@@ -10,8 +10,8 @@ class Mentor(models.Model):
 	mentor_major_projects = models.TextField(blank=True,null=True)
 	mentor_cpi = models.DecimalField(decimal_places=2,max_digits=3,default=0.00)
 
-	#def __str__(self):
-	#	return self.mentor_name
+	def __str__(self):
+		return self.mentor_name
 
 
 class Student(models.Model):
@@ -25,6 +25,6 @@ class Student(models.Model):
 	project_id = models.IntegerField(default=0)
 	group_id = models.IntegerField()
 
-	#def __str__(self):
-	#	return self.student_name
+	def __str__(self):
+		return self.student_name
 						
