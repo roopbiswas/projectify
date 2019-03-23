@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Mentor
+from .models import Student
+
+admin.site.register(Mentor)
+admin.site.register(Student)
