@@ -1,0 +1,16 @@
+<h2>Students</h2>
+
+<table>
+	{%for s in student_list%}
+	<tr>
+		<td>{{s.student_name}}</td>
+		<td>{{s.student_cpi}}</td>
+		{%if s.project_id%}
+			<td>Not Available</td>
+		{%else%}
+			<td>Available</td>
+		{%endif%}
+	</tr>
+	{%endfor%}
+
+</table>
