@@ -13,7 +13,6 @@ class Mentor(models.Model):
 	def __str__(self):
 		return self.mentor_name
 
-
 class Student(models.Model):
 	mentor = models.ForeignKey(Mentor, on_delete=models.CASCADE)
 	student_name = models.CharField(max_length=50)
@@ -28,3 +27,10 @@ class Student(models.Model):
 	def __str__(self):
 		return self.student_name
 						
+class Notifications(models.Model):
+	student = models.ForeignKey(Student, on_delete=models.CASCADE)
+	notify = models.IntegerField(default=0)
+	time = models.DateTimeField()	
+
+	def __str__(self):
+		return self.notify
